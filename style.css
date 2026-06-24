@@ -600,6 +600,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.forma select,
 .forma input,
 .forma textarea {
   width: 100%;
@@ -613,9 +614,12 @@ body {
   outline: none;
   transition: border-color .2s, background .2s;
 }
+.forma select { appearance: none; cursor: pointer; }
+.forma select option { background: var(--blue-dark); color: var(--white); }
 .forma input::placeholder,
 .forma textarea::placeholder { color: rgba(255,255,255,0.45); }
 .forma input:focus,
+.forma select:focus,
 .forma textarea:focus {
   border-color: rgba(255,255,255,0.6);
   background: rgba(255,255,255,0.15);

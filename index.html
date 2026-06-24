@@ -208,7 +208,12 @@
           <input type="email" placeholder="E-mail" required />
           <input type="tel" placeholder="Telefon" required />
           <input type="text" placeholder="Banka u kojoj primam zaradu" />
-          <input type="text" placeholder="Status zaposlenja (npr. Stalni radni odnos)" />
+          <select required>
+            <option value="" disabled selected>Status zaposlenja</option>
+            <option value="odredjeno">Zaposlen na određeno</option>
+            <option value="neodredjeno">Zaposlen na neodređeno</option>
+            <option value="penzioner">Penzioner</option>
+          </select>
           <textarea rows="4" placeholder="Kako Vam možemo pomoći?"></textarea>
           <button type="submit" class="btn-forma">Pošalji upit</button>
         </form>
