@@ -604,8 +604,11 @@ body {
   /* Zasto */
   .zasto { padding: 64px 0; }
   .zasto-inner { gap: 32px; }
-  .visual-card { padding: 24px 20px; }
+  .visual-card { padding: 24px 16px; width: 100%; box-sizing: border-box; }
   .calc-months-btns { grid-template-columns: repeat(3, 1fr); }
+  .zasto-visual { width: 100%; overflow: hidden; }
+  .check-list li { overflow: hidden; }
+  .check-list p { word-break: break-word; }
 
   /* Kontakt */
   .kontakt { padding: 64px 0; }
