@@ -16,11 +16,12 @@
   <header class="nav">
     <div class="container nav-inner">
       <a href="#" class="nav-logo">
-        <img src="logo.png" alt="Kreditoteka logo" />
+        Kreditoteka
       </a>
       <nav class="nav-links">
         <a href="#usluge">Usluge</a>
         <a href="#zasto-mi">Zašto mi?</a>
+        <a href="#zasto-mi">Kalkulator</a>
         <a href="#kontakt" class="btn-nav">Kontaktirajte nas</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Meni">
@@ -46,9 +47,6 @@
           <a href="#kontakt" class="btn-primary">Zakažite konsultaciju</a>
           <a href="#usluge" class="btn-ghost">Naše usluge</a>
         </div>
-      </div>
-      <div class="hero-logo">
-        <img src="logo.png" alt="Kreditoteka" />
       </div>
     </div>
     <div class="hero-wave">
@@ -88,24 +86,29 @@
         <p>Sve što Vam treba na jednom mestu – od prvog razgovora do isplate kredita</p>
       </div>
       <div class="cards">
-        <div class="card">
+        <div class="card card-gotovinski">
           <div class="card-icon">💳</div>
           <h3>Gotovinski krediti</h3>
           <p>Brza analiza Vaše kreditne sposobnosti i pronalaženje najboljeg gotovinskog kredita prema Vašim potrebama i mogućnostima.</p>
         </div>
-        <div class="card">
+        <div class="card card-refinansiranje">
           <div class="card-icon">🔄</div>
-          <h3>Refinansiranje</h3>
+          <h3>Refinansiranje kredita</h3>
           <p>Imate postojeće kredite? Pomažemo Vam da ih konsolidujete ili refinansirate pod povoljnijim uslovima.</p>
         </div>
-        <div class="card">
+        <div class="card card-penzioneri">
+          <div class="card-icon">👴</div>
+          <h3>Krediti za penzionere</h3>
+          <p>Pronalazimo najpovoljnije kreditne uslove prilagođene penzionerima, uz minimalne zahteve i brzu obradu zahteva.</p>
+        </div>
+        <div class="card card-auto">
           <div class="card-icon">🚗</div>
           <h3>Auto krediti</h3>
           <p>Pronalazimo najpovoljnije uslove za kupovinu vozila i pomažemo Vam da odaberete kredit koji najviše odgovara Vašim potrebama.</p>
         </div>
-        <div class="card">
+        <div class="card card-finansijsko card-wide">
           <div class="card-icon">📊</div>
-          <h3>Finansijsko savetovanje</h3>
+          <h3>Finansijsko savetovanje i saveti</h3>
           <p>Stručna analiza Vaše finansijske situacije i saveti kako da optimizujete troškove i poboljšate kreditni profil.</p>
         </div>
       </div>
@@ -121,8 +124,8 @@
           <li>
             <span class="check">✓</span>
             <div>
-              <strong>Radimo za Vas, ne za banku</strong>
-              <p>Naš jedini cilj je da pronađemo best deal za klijenta, bez pritiska ili skrivenih provizija.</p>
+              <strong>Vaš interes je prioritet</strong>
+              <p>Naš jedini cilj je da pronađemo najbolju ponudu za Vas, bez pritiska ili skrivenih provizija.</p>
             </div>
           </li>
           <li>
@@ -149,7 +152,7 @@
         </ul>
       </div>
       <div class="zasto-visual">
-        <div class="visual-card calc-card">
+        <div class="visual-card calc-card" id="kalkulator">
           <h4 class="calc-title">Kalkulator kredita</h4>
           <p class="calc-subtitle">Koji iznos Vas zanima?</p>
           <div class="calc-amount-wrap">
@@ -184,18 +187,109 @@
   </section>
 
   <!-- KONTAKT -->
+  <section class="recenzije">
+    <div class="container">
+      <div class="recenzije-header">
+        <div class="prosecna-ocena">
+          <div class="ocena-red">
+            <span class="ocena-broj">4.8</span>
+            <span class="ocena-max">/5</span>
+          </div>
+          <div class="zvezde">★★★★★</div>
+          <span class="ocena-tekst">prosečna ocena klijenata</span>
+        </div>
+      </div>
+      <div class="karusel-wrapper">
+        <button class="karusel-btn karusel-prev">&#8249;</button>
+        <div class="karusel-track-outer">
+          <div class="karusel-track">
+            <div class="recenzija-kartica">
+              <div class="rec-zvezde">★★★★★</div>
+              <p>"Sve je prošlo brzo i bez stresa. Za manje od nedelje dana kredit je bio odobren. Preporučujem svima!"</p>
+              <div class="rec-autor">
+                <div class="rec-inicijali" style="background-image:url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80');background-size:cover;background-position:center;"></div>
+                <div>
+                  <strong>Milorad Ćirković Mićko</strong>
+                  <span>Novi Sad</span>
+                </div>
+              </div>
+            </div>
+            <div class="recenzija-kartica">
+              <div class="rec-zvezde">★★★★★</div>
+              <p>"Odlična usluga, stručni i ljubazni savetnici. Pomogli su mi da refinansiram stari kredit i uštedim mesečno."</p>
+              <div class="rec-autor">
+                <div class="rec-inicijali" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80');background-size:cover;background-position:center;"></div>
+                <div>
+                  <strong>Ana Simić</strong>
+                  <span>Beograd</span>
+                </div>
+              </div>
+            </div>
+            <div class="recenzija-kartica">
+              <div class="rec-zvezde">★★★★★</div>
+              <p>"Nisam verovao da može ovako jednostavno. Objasnili su sve do detalja i pronašli mi najnižu ratu."</p>
+              <div class="rec-autor">
+                <div class="rec-inicijali">DM</div>
+                <div>
+                  <strong>Dragan Milošević</strong>
+                  <span>Niš</span>
+                </div>
+              </div>
+            </div>
+            <div class="recenzija-kartica">
+              <div class="rec-zvezde">★★★★☆</div>
+              <p>"Profesionalan tim koji zaista brine o klijentima. Auto kredit sredili smo za dva dana."</p>
+              <div class="rec-autor">
+                <div class="rec-inicijali" style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80');background-size:cover;background-position:center;"></div>
+                <div>
+                  <strong>Jelena Petrović</strong>
+                  <span>Kragujevac</span>
+                </div>
+              </div>
+            </div>
+            <div class="recenzija-kartica">
+              <div class="rec-zvezde">★★★★★</div>
+              <p>"Kao penzioner nisam znao kuda da se okrenemo. Kreditoteka nas je provela kroz ceo proces bez ikakvih komplikacija."</p>
+              <div class="rec-autor">
+                <div class="rec-inicijali">SR</div>
+                <div>
+                  <strong>Slobodan Radović</strong>
+                  <span>Subotica</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="karusel-btn karusel-next">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
   <section class="kontakt" id="kontakt">
     <div class="container kontakt-inner-new">
       <div class="kontakt-left">
         <h2>Stupi u kontakt</h2>
-        <p>Potrebni su nam sledeći podaci kako bismo Vam mogli pružiti najbolju moguću uslugu. Ove informacije su ključne za tačnu procenu i efikasno upravljanje Vašim zahtevom.</p>
-        <p>Pišite nam i ubrzo ćemo Vas kontaktirati kako bismo se dogovorili o daljim koracima. Radujemo se Vašem javljanju!</p>
-        <div class="kontakt-info">
-          <a href="mailto:kreditoteka@gmail.com" class="kontakt-info-item">
-            <span>✉️</span> kreditoteka@gmail.com
+        <p>Popunite formular i naš tim će Vam se javiti u najkraćem roku. Besplatno Vas savetujemo i pomažemo da pronađete kredit koji Vam najviše odgovara.</p>
+        <div class="kontakt-kartice">
+          <a href="mailto:kreditoteka@gmail.com" class="kontakt-kartica">
+            <div class="kontakt-kartica-ikona">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <span>kreditoteka@gmail.com</span>
+            </div>
           </a>
-          <a href="https://www.instagram.com/kreditoteka" target="_blank" rel="noopener noreferrer" class="kontakt-info-item">
-            <span>📸</span> @kreditoteka
+          <a href="https://www.instagram.com/kreditoteka" target="_blank" rel="noopener noreferrer" class="kontakt-kartica">
+            <div class="kontakt-kartica-ikona">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.25" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Instagram</strong>
+              <span>@kreditoteka</span>
+            </div>
           </a>
         </div>
       </div>
@@ -227,7 +321,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© 2025 Kreditoteka. Sva prava zadržana.</p>
+      <p>© 2026 Kreditoteka. Sva prava zadržana.</p>
       <p class="footer-tag">Vaš partner u realizaciji kredita</p>
     </div>
   </footer>
@@ -326,6 +420,39 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.card, .stat, .check-list li, .k-card').forEach(el => observer.observe(el));
+  </script>
+  <script>
+    const track = document.querySelector('.karusel-track');
+    const origCards = Array.from(document.querySelectorAll('.recenzija-kartica'));
+    const prev = document.querySelector('.karusel-prev');
+    const next = document.querySelector('.karusel-next');
+    const total = origCards.length;
+
+    // kloniramo kartice pre i posle za beskonacni loop
+    origCards.forEach(c => track.appendChild(c.cloneNode(true)));
+    origCards.forEach(c => track.insertBefore(c.cloneNode(true), track.firstChild));
+
+    let idx = total; // startujemo od originalnih (posle prvih klonova)
+
+    function cardWidth() {
+      return track.children[0].offsetWidth + 24;
+    }
+
+    function goTo(i, animated) {
+      track.style.transition = animated ? 'transform 0.4s ease' : 'none';
+      track.style.transform = `translateX(-${i * cardWidth()}px)`;
+    }
+
+    goTo(idx, false);
+
+    track.addEventListener('transitionend', () => {
+      if (idx >= total * 2) { idx = total; goTo(idx, false); }
+      if (idx <= 0) { idx = total; goTo(idx, false); }
+    });
+
+    next.addEventListener('click', () => { idx++; goTo(idx, true); });
+    prev.addEventListener('click', () => { idx--; goTo(idx, true); });
+    window.addEventListener('resize', () => goTo(idx, false));
   </script>
 
 </body>

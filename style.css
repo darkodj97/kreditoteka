@@ -51,9 +51,12 @@ body {
   justify-content: space-between;
   height: 70px;
 }
-.nav-logo img {
-  height: 48px;
-  display: block;
+.nav-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--blue) !important;
+  text-decoration: none;
+  letter-spacing: -0.3px;
 }
 .nav-links {
   display: flex;
@@ -117,14 +120,14 @@ body {
 /* ── HERO ── */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, #1358a0 0%, #1a6fc4 50%, #2389e0 100%);
+  background: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&q=80') 65% 20% / cover no-repeat;
   padding: 140px 0 100px;
   overflow: hidden;
 }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(19,88,160,0.60) 0%, rgba(26,111,196,0.45) 50%, rgba(35,137,224,0.30) 100%);
 }
 .hero-content {
   position: relative;
@@ -138,13 +141,15 @@ body {
   max-width: 600px;
 }
 .hero-logo {
-  flex-shrink: 0;
+  position: absolute;
+  bottom: 90px;
+  right: 24px;
 }
 .hero-logo img {
-  width: 320px;
-  height: 320px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
-  filter: drop-shadow(0 8px 32px rgba(0,0,0,0.25));
+  opacity: 0.35;
 }
 .hero-tag {
   display: inline-block;
@@ -166,7 +171,7 @@ body {
   margin-bottom: 20px;
 }
 .hero h1 .accent {
-  color: #90c8ff;
+  color: var(--blue);
 }
 .hero-sub {
   font-size: 18px;
@@ -243,7 +248,7 @@ body {
 /* ── USLUGE ── */
 .usluge {
   padding: 96px 0;
-  background: var(--white);
+  background: #eef3fa;
 }
 .section-header {
   text-align: center;
@@ -268,33 +273,53 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
+.card-wide {
+  grid-column: 1 / -1;
+}
 .card {
   background: var(--bg);
   border-radius: var(--radius);
-  padding: 32px 28px;
-  border: 1px solid transparent;
+  padding: 64px 28px;
+  border: 1px solid #c8d8ef;
   transition: border-color .2s, box-shadow .2s, transform .2s, opacity .5s;
   opacity: 0;
   transform: translateY(24px);
+  position: relative;
+  overflow: hidden;
 }
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 0;
+}
+.card > * { position: relative; z-index: 1; }
 .card.visible { opacity: 1; transform: none; }
 .card:hover {
   border-color: var(--blue);
   box-shadow: var(--shadow);
   transform: translateY(-4px);
 }
+.card-gotovinski::before { background-image: linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)), url('https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=800&q=80'); }
+.card-refinansiranje::before { background-image: linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80'); }
+.card-auto::before { background-image: linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80'); }
+.card-finansijsko::before { background-image: linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80'); }
+.card-penzioneri::before { background-image: linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)), url('https://images.unsplash.com/photo-1746192703433-9313b8ebcc4a?w=800&q=80'); }
 .card-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
+  display: none;
 }
 .card h3 {
   font-size: 17px;
   font-weight: 700;
   margin-bottom: 10px;
+  color: #000;
 }
 .card p {
   font-size: 14px;
-  color: var(--muted);
+  color: #000;
   line-height: 1.65;
 }
 
@@ -505,8 +530,127 @@ body {
 .btn-calc:hover { background: var(--blue-dark); }
 
 /* ── KONTAKT ── */
+/* Recenzije */
+.recenzije {
+  padding: 80px 0;
+  background: #eef3fa;
+}
+.recenzije-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.prosecna-ocena {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.ocena-red {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.ocena-broj {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--blue);
+  line-height: 1;
+}
+.ocena-max {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+.zvezde {
+  font-size: 1.8rem;
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+.ocena-tekst {
+  font-size: 14px;
+  color: var(--muted);
+}
+.karusel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.karusel-track-outer {
+  overflow: hidden;
+  flex: 1;
+}
+.karusel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease;
+}
+.recenzija-kartica {
+  min-width: calc(33.333% - 16px);
+  background: var(--white);
+  border: 1px solid #dde6f5;
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rec-zvezde {
+  color: #f5a623;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.recenzija-kartica p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  flex: 1;
+}
+.rec-autor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.rec-inicijali {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.rec-autor strong {
+  display: block;
+  font-size: 14px;
+  color: var(--text);
+}
+.rec-autor span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.karusel-btn {
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background .2s;
+}
+.karusel-btn:hover { background: var(--blue-dark); }
+
 .kontakt {
-  background: linear-gradient(135deg, #1358a0 0%, #1a6fc4 60%, #2389e0 100%);
+  background: linear-gradient(rgba(10,40,90,0.65), rgba(10,40,90,0.65)), url('https://images.unsplash.com/photo-1763729805496-b5dbf7f00c79?w=1600&q=80') center/cover no-repeat;
   padding: 96px 0;
 }
 .kontakt-inner { text-align: center; }
@@ -572,23 +716,52 @@ body {
   line-height: 1.7;
   margin-bottom: 16px;
 }
-.kontakt-info {
+.kontakt-kartice {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 8px;
+  margin-top: 24px;
 }
-.kontakt-info-item {
+.kontakt-kartica {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: rgba(255,255,255,0.85);
+  gap: 16px;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 16px 20px;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  transition: color .2s;
+  color: var(--white);
+  transition: background .2s, transform .2s;
 }
-.kontakt-info-item:hover { color: var(--white); }
+.kontakt-kartica:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+.kontakt-kartica-ikona {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.kontakt-kartica strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.65;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.kontakt-kartica span {
+  font-size: 15px;
+  font-weight: 600;
+}
 
 .forma {
   display: flex;
