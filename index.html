@@ -200,7 +200,7 @@
         </div>
       </div>
       <div class="kontakt-right">
-        <form class="forma" id="kontaktForma">
+        <form class="forma" id="kontaktForma" name="kontakt" method="POST" data-netlify="true">
           <div class="forma-row">
             <input type="text" placeholder="Ime" required />
             <input type="text" placeholder="Prezime" required />
@@ -208,6 +208,8 @@
           <input type="email" placeholder="E-mail" required />
           <input type="tel" placeholder="Telefon" required />
           <input type="text" placeholder="Banka u kojoj primam zaradu" />
+          <input type="text" placeholder="Mesto stanovanja" />
+          <label class="forma-label">Status zaposlenja</label>
           <div class="status-group">
             <button type="button" class="status-btn" data-value="odredjeno"><span class="radio-dot"></span>Na određeno</button>
             <button type="button" class="status-btn" data-value="neodredjeno"><span class="radio-dot"></span>Na neodređeno</button>

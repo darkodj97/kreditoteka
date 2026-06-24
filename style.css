@@ -613,27 +613,34 @@ body {
   outline: none;
   transition: border-color .2s;
 }
+.forma-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: -4px;
+}
 .status-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 1.5px solid rgba(255,255,255,0.2);
+  border: 1.5px solid #0f4a8a;
   border-radius: 10px;
   overflow: hidden;
 }
 .status-btn {
-  background: rgba(255,255,255,0.1);
+  background: var(--blue-dark);
   border: none;
-  border-right: 1.5px solid rgba(255,255,255,0.2);
+  border-right: 1.5px solid #0f4a8a;
   padding: 13px 8px;
   font-size: 14px;
   font-weight: 600;
   font-family: inherit;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.9);
   cursor: pointer;
   transition: background .2s, color .2s;
 }
 .status-btn:last-child { border-right: none; }
-.status-btn:hover { background: rgba(255,255,255,0.18); color: var(--white); }
+.status-btn:hover { background: #0f4a8a; color: var(--white); }
 .status-btn.active { background: var(--white); color: var(--blue); }
 .status-btn.active .radio-dot { background: var(--blue); border-color: var(--blue); box-shadow: inset 0 0 0 3px var(--white); }
 
@@ -667,8 +674,8 @@ body {
 .forma textarea:focus { border-color: var(--blue); }
 .forma textarea { resize: vertical; min-height: 110px; }
 .btn-forma {
-  background: var(--white);
-  color: var(--blue);
+  background: var(--blue-dark);
+  color: var(--white);
   font-weight: 700;
   font-size: 16px;
   font-family: inherit;
@@ -679,7 +686,7 @@ body {
   transition: background .2s, transform .2s;
   margin-top: 4px;
 }
-.btn-forma:hover { background: #e8f1fb; transform: translateY(-2px); }
+.btn-forma:hover { background: #0f4a8a; transform: translateY(-2px); }
 
 @media (max-width: 860px) {
   .kontakt-inner-new { grid-template-columns: 1fr; gap: 40px; }
