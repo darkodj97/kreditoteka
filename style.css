@@ -553,6 +553,94 @@ body {
 }
 .k-card.insta .k-icon { color: var(--white); }
 
+/* ── KONTAKT FORMA ── */
+.kontakt-inner-new {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+.kontakt-left h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.kontakt-left p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.kontakt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+.kontakt-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color .2s;
+}
+.kontakt-info-item:hover { color: var(--white); }
+
+.forma {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.forma-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.forma input,
+.forma textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--white);
+  outline: none;
+  transition: border-color .2s, background .2s;
+}
+.forma input::placeholder,
+.forma textarea::placeholder { color: rgba(255,255,255,0.45); }
+.forma input:focus,
+.forma textarea:focus {
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.15);
+}
+.forma textarea { resize: vertical; min-height: 110px; }
+.btn-forma {
+  background: var(--white);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+  margin-top: 4px;
+}
+.btn-forma:hover { background: #e8f1fb; transform: translateY(-2px); }
+
+@media (max-width: 860px) {
+  .kontakt-inner-new { grid-template-columns: 1fr; gap: 40px; }
+  .forma-row { grid-template-columns: 1fr; }
+}
+
 /* ── FOOTER ── */
 .footer {
   background: var(--text);
