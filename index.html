@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kreditoteka – Vaš partner u realizaciji kredita</title>
+  <meta name="description" content="Kreditoteka – stručno finansijsko savetovanje i podrška pri podizanju kredita." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="Kreditoteka logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="#usluge">Usluge</a>
+        <a href="#zasto-mi">Zašto mi?</a>
+        <a href="#kontakt" class="btn-nav">Kontaktirajte nas</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#usluge" onclick="closeMenu()">Usluge</a>
+      <a href="#zasto-mi" onclick="closeMenu()">Zašto mi?</a>
+      <a href="#kontakt" onclick="closeMenu()">Kontaktirajte nas</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-tag">Finansijsko savetovanje</span>
+        <h1>Vaš partner u realizaciji<br /><span class="accent">kredita</span></h1>
+        <p class="hero-sub">Pomažemo Vam da pronađete pravo kreditno rešenje, bez komplikacija i zbunjujućih papira. Brzo, transparentno i uz stručnu podršku.</p>
+        <div class="hero-cta">
+          <a href="#kontakt" class="btn-primary">Zakažite konsultaciju</a>
+          <a href="#usluge" class="btn-ghost">Naše usluge</a>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <img src="logo.png" alt="Kreditoteka" />
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f5f7fa"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat">
+        <strong>2000+</strong>
+        <span>zadovoljnih klijenata</span>
+      </div>
+      <div class="stat">
+        <strong>5+</strong>
+        <span>bankarskih partnera</span>
+      </div>
+      <div class="stat">
+        <strong>100%</strong>
+        <span>konsultacije uvek besplatne</span>
+      </div>
+      <div class="stat">
+        <strong>24h</strong>
+        <span>prosečno vreme odgovora</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- USLUGE -->
+  <section class="usluge" id="usluge">
+    <div class="container">
+      <div class="section-header">
+        <h2>Naše usluge</h2>
+        <p>Sve što Vam treba na jednom mestu – od prvog razgovora do isplate kredita</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">💳</div>
+          <h3>Gotovinski krediti</h3>
+          <p>Brza analiza Vaše kreditne sposobnosti i pronalaženje najboljeg gotovinskog kredita prema Vašim potrebama i mogućnostima.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <h3>Refinansiranje</h3>
+          <p>Imate postojeće kredite? Pomažemo Vam da ih konsolidujete ili refinansirate pod povoljnijim uslovima.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚗</div>
+          <h3>Auto krediti</h3>
+          <p>Pronalazimo najpovoljnije uslove za kupovinu vozila i pomažemo Vam da odaberete kredit koji najviše odgovara Vašim potrebama.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Finansijsko savetovanje</h3>
+          <p>Stručna analiza Vaše finansijske situacije i saveti kako da optimizujete troškove i poboljšate kreditni profil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZASTO MI -->
+  <section class="zasto" id="zasto-mi">
+    <div class="container zasto-inner">
+      <div class="zasto-text">
+        <h2>Zašto izabrati Kreditoteku?</h2>
+        <ul class="check-list">
+          <li>
+            <span class="check">✓</span>
+            <div>
+              <strong>Radimo za Vas, ne za banku</strong>
+              <p>Naš jedini cilj je da pronađemo best deal za klijenta, bez pritiska ili skrivenih provizija.</p>
+            </div>
+          </li>
+          <li>
+            <span class="check">✓</span>
+            <div>
+              <strong>Štedimo Vaše vreme</strong>
+              <p>Vi donosite dokumenta jednom – mi komuniciramo sa svim bankama umesto Vas.</p>
+            </div>
+          </li>
+          <li>
+            <span class="check">✓</span>
+            <div>
+              <strong>Transparentnost na svakom koraku</strong>
+              <p>Jasno objašnjavamo sve troškove, kamate i uslove</p>
+            </div>
+          </li>
+          <li>
+            <span class="check">✓</span>
+            <div>
+              <strong>Iskustvo koje se isplati</strong>
+              <p>Godinama u finansijskoj industriji, stotine realizovanih kredita iza nas.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="zasto-visual">
+        <div class="visual-card calc-card">
+          <h4 class="calc-title">Kalkulator kredita</h4>
+          <p class="calc-subtitle">Koji iznos Vas zanima?</p>
+          <div class="calc-amount-wrap">
+            <input type="text" id="calcAmount" value="10.000" inputmode="numeric" placeholder="Unesite iznos" />
+            <span class="calc-currency">RSD</span>
+          </div>
+          <div class="calc-slider-wrap">
+            <input type="range" id="calcSlider" min="10000" max="5000000" step="10000" value="10000" />
+            <div class="calc-slider-labels">
+              <span>10.000 RSD</span><span>5.000.000 RSD</span>
+            </div>
+          </div>
+          <div class="calc-months-wrap">
+            <label class="calc-field-label">Rok otplate</label>
+            <div class="calc-months-btns">
+              <button class="month-btn" data-months="12">12 mes.</button>
+              <button class="month-btn" data-months="24">24 mes.</button>
+              <button class="month-btn" data-months="36">36 mes.</button>
+              <button class="month-btn" data-months="48">48 mes.</button>
+              <button class="month-btn" data-months="60">60 mes.</button>
+              <button class="month-btn active" data-months="71">71 mes.</button>
+            </div>
+          </div>
+          <div class="calc-result">
+            <span>Rata već od:</span>
+            <strong id="calcOutput">193,00 €</strong>
+          </div>
+          <a href="#kontakt" class="btn-calc">Kontaktirajte nas →</a>
+          <p class="vc-note">Orijentacioni iznos na 71 mesec</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="kontakt" id="kontakt">
+    <div class="container kontakt-inner">
+      <div class="section-header light">
+        <h2>Kontaktirajte nas</h2>
+        <p>Prva konsultacija je besplatna. Pišite nam i javićemo se što pre.</p>
+      </div>
+      <div class="kontakt-cards">
+        <a href="mailto:kreditoteka@gmail.com" class="k-card">
+          <div class="k-icon">✉️</div>
+          <strong>Email</strong>
+          <span>kreditoteka@gmail.com</span>
+        </a>
+        <a href="https://www.instagram.com/kreditoteka" target="_blank" rel="noopener noreferrer" class="k-card insta">
+          <div class="k-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/>
+              <circle cx="17.5" cy="6.5" r="1.25" fill="currentColor"/>
+            </svg>
+          </div>
+          <strong>Instagram</strong>
+          <span>@kreditoteka</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 Kreditoteka. Sva prava zadržana.</p>
+      <p class="footer-tag">Vaš partner u realizaciji kredita</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+
+    // Smooth scroll + nav highlight on scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Sticky nav shadow
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Loan calculator — fixed 7%
+    const RATE = 7 / 100 / 12;
+    let MONTHS = 71;
+
+    function formatRS(num) {
+      return num.toLocaleString('de-DE'); // tačka za hiljade, zarez za decimale (evropski)
+    }
+    function parseRS(str) {
+      return parseFloat(str.replace(/\./g, '').replace(',', '.')) || 0;
+    }
+
+    function calcLoan(raw) {
+      const monthly = raw > 0 ? (raw * RATE * Math.pow(1+RATE, MONTHS)) / (Math.pow(1+RATE, MONTHS) - 1) : 0;
+      document.getElementById('calcOutput').textContent = formatRS(Math.round(monthly * 100) / 100).replace(',', ',') + ' RSD';
+    }
+
+    const amountInput = document.getElementById('calcAmount');
+    const slider = document.getElementById('calcSlider');
+
+    amountInput.addEventListener('input', () => {
+      const digits = amountInput.value.replace(/\./g, '').replace(/[^0-9]/g, '');
+      let num = parseInt(digits) || 0;
+      if (num > 5000000) num = 5000000;
+      const pos = amountInput.selectionStart;
+      const oldLen = amountInput.value.length;
+      amountInput.value = num > 0 ? formatRS(num) : '';
+      const newLen = amountInput.value.length;
+      amountInput.setSelectionRange(pos + (newLen - oldLen), pos + (newLen - oldLen));
+      slider.value = Math.min(Math.max(num, 10000), 5000000);
+      calcLoan(num);
+    });
+
+    slider.addEventListener('input', () => {
+      const num = parseInt(slider.value);
+      amountInput.value = formatRS(num);
+      calcLoan(num);
+    });
+
+    document.querySelectorAll('.month-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        MONTHS = parseInt(btn.dataset.months);
+        calcLoan(parseRS(amountInput.value));
+      });
+    });
+
+    calcLoan(10000);
+
+    // Animate on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card, .stat, .check-list li, .k-card').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
