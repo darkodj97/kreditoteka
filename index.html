@@ -270,28 +270,6 @@
       <div class="kontakt-left">
         <h2>Stupi u kontakt</h2>
         <p>Popunite formular i naš tim će Vam se javiti u najkraćem roku. Besplatno Vas savetujemo i pomažemo da pronađete kredit koji Vam najviše odgovara.</p>
-        <div class="kontakt-kartice">
-          <a href="mailto:kreditoteka@gmail.com" class="kontakt-kartica">
-            <div class="kontakt-kartica-ikona">✉️</div>
-            <div>
-              <strong>Email</strong>
-              <span>kreditoteka@gmail.com</span>
-            </div>
-          </a>
-          <a href="https://www.instagram.com/kreditoteka" target="_blank" rel="noopener noreferrer" class="kontakt-kartica">
-            <div class="kontakt-kartica-ikona">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="2"/>
-                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/>
-                <circle cx="17.5" cy="6.5" r="1.25" fill="currentColor"/>
-              </svg>
-            </div>
-            <div>
-              <strong>Instagram</strong>
-              <span>@kreditoteka</span>
-            </div>
-          </a>
-        </div>
       </div>
       <div class="kontakt-right">
         <form class="forma" id="kontaktForma" action="https://formspree.io/f/xwvdvnja" method="POST">
@@ -315,6 +293,28 @@
           <button type="submit" class="btn-forma">Pošalji upit</button>
         </form>
       </div>
+      <div class="kontakt-kartice">
+          <a href="mailto:kreditoteka@gmail.com" class="kontakt-kartica">
+            <div class="kontakt-kartica-ikona">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <span>kreditoteka@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/kreditoteka" target="_blank" rel="noopener noreferrer" class="kontakt-kartica">
+            <div class="kontakt-kartica-ikona">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.25" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Instagram</strong>
+              <span>@kreditoteka</span>
+            </div>
+          </a>
+        </div>
     </div>
   </section>
 
@@ -428,11 +428,14 @@
     const next = document.querySelector('.karusel-next');
     const total = origCards.length;
 
-    // kloniramo kartice pre i posle za beskonacni loop
     origCards.forEach(c => track.appendChild(c.cloneNode(true)));
     origCards.forEach(c => track.insertBefore(c.cloneNode(true), track.firstChild));
 
-    let idx = total; // startujemo od originalnih (posle prvih klonova)
+    let idx = total;
+
+    function visibleCount() {
+      return window.innerWidth <= 640 ? 1 : 3;
+    }
 
     function cardWidth() {
       return track.children[0].offsetWidth + 24;
