@@ -208,12 +208,12 @@
           <input type="email" placeholder="E-mail" required />
           <input type="tel" placeholder="Telefon" required />
           <input type="text" placeholder="Banka u kojoj primam zaradu" />
-          <select required>
-            <option value="" disabled selected>Status zaposlenja</option>
-            <option value="odredjeno">Zaposlen na određeno</option>
-            <option value="neodredjeno">Zaposlen na neodređeno</option>
-            <option value="penzioner">Penzioner</option>
-          </select>
+          <div class="status-group">
+            <button type="button" class="status-btn" data-value="odredjeno">Na određeno</button>
+            <button type="button" class="status-btn" data-value="neodredjeno">Na neodređeno</button>
+            <button type="button" class="status-btn" data-value="penzioner">Penzioner</button>
+          </div>
+          <input type="hidden" id="statusZaposlenja" name="status" />
           <textarea rows="4" placeholder="Kako Vam možemo pomoći?"></textarea>
           <button type="submit" class="btn-forma">Pošalji upit</button>
         </form>
@@ -303,6 +303,15 @@
         btn.classList.add('active');
         MONTHS = parseInt(btn.dataset.months);
         calcLoan(parseRS(amountInput.value));
+      });
+    });
+
+    // Status zaposlenja
+    document.querySelectorAll('.status-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.status-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('statusZaposlenja').value = btn.dataset.value;
       });
     });
 

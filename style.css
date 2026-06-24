@@ -614,8 +614,28 @@ body {
   outline: none;
   transition: border-color .2s, background .2s;
 }
-.forma select { appearance: none; cursor: pointer; }
-.forma select option { background: var(--blue-dark); color: var(--white); }
+.status-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.status-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-right: 1.5px solid rgba(255,255,255,0.2);
+  padding: 13px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.status-btn:last-child { border-right: none; }
+.status-btn:hover { background: rgba(255,255,255,0.18); color: var(--white); }
+.status-btn.active { background: var(--white); color: var(--blue); }
 .forma input::placeholder,
 .forma textarea::placeholder { color: rgba(255,255,255,0.45); }
 .forma input:focus,
